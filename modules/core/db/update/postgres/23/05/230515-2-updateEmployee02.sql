@@ -1,0 +1,2 @@
+alter table REGISTRATIONOFPASSES_EMPLOYEE add column LASTNAME varchar(255) ;
+alter table REGISTRATIONOFPASSES_EMPLOYEE add column FIRSTNAME varchar(255) ;
