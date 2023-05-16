@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://placeWorkEdit.caption"
+        focusComponent="form"
+        messagesPack="com.company.registrationofpasses.web.screens.placework">
+    <data>
+        <instance id="placeWorkDc"
+                  class="com.company.registrationofpasses.entity.PlaceWork">
+            <view extends="_local"/>
+            <loader/>
+        </instance>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="editActions" spacing="true">
+        <form id="form" dataContainer="placeWorkDc">
+            <column width="350px">
+                <textField id="placeWorkField" property="placeWork"/>
+                <textField id="postField" property="post"/>
+            </column>
+        </form>
+        <hbox id="editActions" spacing="true">
+            <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
+            <button id="closeBtn" action="windowClose"/>
+        </hbox>
+    </layout>
+</window>

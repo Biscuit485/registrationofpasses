@@ -1,0 +1,1 @@
+alter table registrationofpasses_employee rename to REGISTRATIONOFPASSES_EMPLOYEE__U46833 ;
