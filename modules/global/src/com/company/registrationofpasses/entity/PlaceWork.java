@@ -16,6 +16,8 @@ public class PlaceWork extends StandardEntity {
     @NotNull
     private String placeWork;
 
+
+
     @Column(name = "POST")
     @NotNull
     private String post;

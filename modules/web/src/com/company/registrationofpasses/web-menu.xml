@@ -5,6 +5,8 @@
               caption="mainMsg://menu_config.registrationofpasses_Employee.browse"/>
         <item screen="registrationofpasses_PlaceWork.browse"
               caption="mainMsg://menu_config.registrationofpasses_PlaceWork.browse"/>
+        <item screen="registrationofpasses_Phone.browse"
+              caption="mainMsg://menu_config.registrationofpasses_Phone.browse"/>
 
     </menu>
 </menu-config>
