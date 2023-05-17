@@ -15,6 +15,7 @@ import javax.inject.Inject;
 public class PhoneEdit extends StandardEditor<Phone> {
     @Inject
     private MaskedField numberPhoneField;
+
     @Inject
     private Notifications notifications;
 

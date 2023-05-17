@@ -15,9 +15,8 @@
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="phoneDc">
             <column width="350px">
+                <lookupField id="typePhoneField" property="typePhone"/>
                 <maskedField id="numberPhoneField" mask="8(###)###-##-##" valueMode="masked" property="numberPhone"/>
-                <!--<textField id="numberPhoneField" property="numberPhone"/>-->
-
             </column>
         </form>
         <hbox id="editActions" spacing="true">
