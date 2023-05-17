@@ -14,7 +14,7 @@ public class Phone extends StandardEntity {
 
     @Column(name = "NUMBERPHONE")
     @NotNull
-    private String numberPhone;
+    protected String numberPhone;
 
     @Column(name = "TYPEPHONE")
     @NotNull

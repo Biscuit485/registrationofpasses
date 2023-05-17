@@ -13,20 +13,20 @@ public class Employee extends StandardEntity {
 
     @Column(name = "MIDDLENAME")
     @NotNull
-    private String middleName;
+    protected String middleName;
 
     @Column(name = "FIRSTNAME")
     @NotNull
-    private String firstName;
+    protected String firstName;
 
     @Column(name = "LASTNAME")
     @NotNull
-    private String lastName;
+    protected String lastName;
 
     @Column(name = "DATEBIRTH")
     @NotNull
     @Temporal(TemporalType.DATE)
-    private Date dateBirth;
+    protected Date dateBirth;
 
     public String getMiddleName() {
         return middleName;

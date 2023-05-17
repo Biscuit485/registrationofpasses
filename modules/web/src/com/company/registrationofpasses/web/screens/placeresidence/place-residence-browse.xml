@@ -40,6 +40,7 @@
                 <column id="house"/>
                 <column id="corpus"/>
                 <column id="flat"/>
+                <column id="typeAddress"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

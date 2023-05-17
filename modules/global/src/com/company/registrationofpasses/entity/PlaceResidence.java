@@ -14,29 +14,41 @@ public class PlaceResidence extends StandardEntity {
 
     @Column(name = "REGION")
     @NotNull
-    private String region;
+    protected String region;
 
     @Column(name = "CITY")
     @NotNull
-    private String city;
+    protected String city;
 
     @Column(name = "SETTLEMENT")
-    private String settlement;
+    protected String settlement;
 
     @Column(name = "STREET")
     @NotNull
-    private String street;
+    protected String street;
 
     @Column(name = "HOUSE")
     @NotNull
-    private String house;
+    protected String house;
 
     @Column(name = "CORPUS")
-    private String corpus;
+    protected String corpus;
 
     @Column(name = "FLAT")
     @NotNull
-    private String flat;
+    protected String flat;
+
+
+    @Column(name = "TYPEADDRESS")
+    @NotNull
+    protected String typeAddress;
+
+    public TypeAddress getTypeAddress() {
+        return typeAddress == null ? null : TypeAddress.fromId(typeAddress);
+    }
+    public void setTypeAddress(TypeAddress typeAddress) {
+        this.typeAddress = typeAddress == null ? null : typeAddress.getId();
+    }
 
     public String getRegion() {
         return region;

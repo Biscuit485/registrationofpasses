@@ -14,13 +14,13 @@ public class PlaceWork extends StandardEntity {
 
     @Column(name = "PLACEWORK")
     @NotNull
-    private String placeWork;
+    protected String placeWork;
 
 
 
     @Column(name = "POST")
     @NotNull
-    private String post;
+    protected String post;
 
     public String getPlaceWork() {
         return placeWork;

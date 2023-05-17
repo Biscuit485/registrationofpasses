@@ -1,0 +1,1 @@
+alter table REGISTRATIONOFPASSES_PLACE_RESIDENCE add column TYPEADDRESS varchar(50) ;

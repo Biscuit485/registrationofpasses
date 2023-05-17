@@ -66,6 +66,7 @@ create table REGISTRATIONOFPASSES_PLACE_RESIDENCE (
     HOUSE varchar(255),
     CORPUS varchar(255),
     FLAT varchar(255),
+    TYPEADDRESS varchar(50),
     --
     primary key (ID)
 )^
