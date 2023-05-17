@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://placeResidenceBrowse.caption"
+        focusComponent="placeResidencesTable"
+        messagesPack="com.company.registrationofpasses.web.screens.placeresidence">
+    <data readOnly="true">
+        <collection id="placeResidencesDc"
+                    class="com.company.registrationofpasses.entity.PlaceResidence">
+            <view extends="_local"/>
+            <loader id="placeResidencesDl">
+                <query>
+                    <![CDATA[select e from registrationofpasses_PlaceResidence e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="placeResidencesTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="placeResidencesTable"
+                dataLoader="placeResidencesDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="placeResidencesTable"
+                    width="100%"
+                    dataContainer="placeResidencesDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="region"/>
+                <column id="city"/>
+                <column id="settlement"/>
+                <column id="street"/>
+                <column id="house"/>
+                <column id="corpus"/>
+                <column id="flat"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="placeResidencesTable.create"/>
+                <button id="editBtn" action="placeResidencesTable.edit"/>
+                <button id="removeBtn" action="placeResidencesTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>

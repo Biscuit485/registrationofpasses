@@ -7,6 +7,8 @@
               caption="mainMsg://menu_config.registrationofpasses_PlaceWork.browse"/>
         <item screen="registrationofpasses_Phone.browse"
               caption="mainMsg://menu_config.registrationofpasses_Phone.browse"/>
+        <item screen="registrationofpasses_PlaceResidence.browse"
+              caption="mainMsg://menu_config.registrationofpasses_PlaceResidence.browse"/>
 
     </menu>
 </menu-config>
