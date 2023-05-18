@@ -29,7 +29,7 @@
                 <textField id="firstNameField" property="firstName"/>
                 <textField id="lastNameField" property="lastName"/>
                 <dateField id="dateBirthField" property="dateBirth"/>
-                <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc"/>
+                <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc" nullOptionVisible="false"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

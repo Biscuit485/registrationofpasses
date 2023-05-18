@@ -2,9 +2,7 @@ package com.company.registrationofpasses.entity;
 
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Table(name = "REGISTRATIONOFPASSES_PHONE")
@@ -19,6 +17,14 @@ public class Phone extends StandardEntity {
     @Column(name = "TYPEPHONE")
     @NotNull
     protected String typePhone;
+
+    @JoinColumn(name = "EMPLOYEE")
+    @ManyToOne(fetch = FetchType.LAZY)
+    protected Employee employee;
+
+    public Employee getEmployee(){ return employee;}
+
+    public void setEmployee(Employee employee){ this.employee = employee; }
 
     public TypePhone getTypePhone() {
         return typePhone == null ? null : TypePhone.fromId(typePhone);

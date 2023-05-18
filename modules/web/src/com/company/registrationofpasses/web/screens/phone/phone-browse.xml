@@ -7,10 +7,24 @@
     <data readOnly="true">
         <collection id="phonesDc"
                     class="com.company.registrationofpasses.entity.Phone">
-            <view extends="_local"/>
+            <view extends="_local">
+                <property name="employee" view="_minimal">
+                    <property name="middleName"/>
+                    <property name="firstName"/>
+                    <property name="lastName"/>
+                </property>
+            </view>
             <loader id="phonesDl">
                 <query>
                     <![CDATA[select e from registrationofpasses_Phone e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="employeeDc" class="com.company.registrationofpasses.entity.Employee">
+            <view extends="_minimal"/>
+            <loader id="employeeDl">
+                <query>
+                    <![CDATA[select e from registrationofpasses_Employee e]]>
                 </query>
             </loader>
         </collection>
@@ -33,6 +47,7 @@
                 <action id="remove" type="remove"/>
             </actions>
             <columns>
+                <column id="employee" optionsContainer="employeeDc"/>
                 <column id="numberPhone"/>
                 <column id="typePhone"/>
             </columns>

@@ -36,6 +36,7 @@ create table REGISTRATIONOFPASSES_PHONE (
     --
     NUMBERPHONE varchar(255),
     TYPEPHONE varchar(50),
+    EMPLOYEE uuid,
     --
     primary key (ID)
 )^
