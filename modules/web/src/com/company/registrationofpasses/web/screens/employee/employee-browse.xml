@@ -7,10 +7,22 @@
     <data readOnly="true">
         <collection id="employeesDc"
                     class="com.company.registrationofpasses.entity.Employee">
-            <view extends="_local"/>
+            <view extends="_local">
+                <property name="placeWork" view="_minimal">
+                    <property name="placeWork"/>
+                    <property name="post"/>
+                </property>
+            </view>
             <loader id="employeesDl">
                 <query>
                     <![CDATA[select e from registrationofpasses_Employee e]]>
+                </query>
+            </loader>
+        </collection>
+        <collection id="placeWorkDc" class="com.company.registrationofpasses.entity.PlaceWork" view="_minimal">
+            <loader id="placeWorkDl">
+                <query>
+                    <![CDATA[select e from registrationofpasses_PlaceWork e]]>
                 </query>
             </loader>
         </collection>
@@ -37,6 +49,7 @@
                 <column id="firstName"/>
                 <column id="lastName"/>
                 <column id="dateBirth"/>
+                <column id="placeWork" optionsContainer="placeWorkDc"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

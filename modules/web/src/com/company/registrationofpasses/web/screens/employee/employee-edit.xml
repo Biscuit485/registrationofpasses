@@ -6,9 +6,19 @@
     <data>
         <instance id="employeeDc"
                   class="com.company.registrationofpasses.entity.Employee">
-            <view extends="_local"/>
+            <view extends="_local">
+                    <property name = "placeWork" view="_minimal"/>
+            </view>
             <loader/>
         </instance>
+        <collection id="placeWorkDc" class="com.company.registrationofpasses.entity.PlaceWork">
+            <view extends="_minimal"/>
+            <loader id="placeWorkDl">
+                <query>
+                    <![CDATA[select e from registrationofpasses_PlaceWork e]]>
+                </query>
+            </loader>
+        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
@@ -19,6 +29,7 @@
                 <textField id="firstNameField" property="firstName"/>
                 <textField id="lastNameField" property="lastName"/>
                 <dateField id="dateBirthField" property="dateBirth"/>
+                <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

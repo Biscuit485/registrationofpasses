@@ -1,5 +1,6 @@
 package com.company.registrationofpasses.entity;
 
+import com.haulmont.chile.core.annotations.NamePattern;
 import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
@@ -8,6 +9,7 @@ import java.util.Date;
 
 @Table(name = "REGISTRATIONOFPASSES_EMPLOYEE")
 @Entity(name = "registrationofpasses_Employee")
+@NamePattern("%s %s|middleName, firstName, lastName")
 public class Employee extends StandardEntity {
     private static final long serialVersionUID = -6413025411645155462L;
 
@@ -28,6 +30,14 @@ public class Employee extends StandardEntity {
     @Temporal(TemporalType.DATE)
     protected Date dateBirth;
 
+    @JoinColumn(name = "PLACEWORK")
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    protected PlaceWork placeWork;
+
+    public  PlaceWork getPlaceWork(){ return placeWork; }
+
+    public void setPlaceWork(PlaceWork placeWork){ this.placeWork = placeWork;}
     public String getMiddleName() {
         return middleName;
     }
