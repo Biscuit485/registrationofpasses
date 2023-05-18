@@ -14,10 +14,6 @@ public class Phone extends StandardEntity {
     @NotNull
     protected String numberPhone;
 
-    @Column(name = "TYPEPHONE")
-    @NotNull
-    protected String typePhone;
-
     @JoinColumn(name = "EMPLOYEE")
     @ManyToOne(fetch = FetchType.LAZY)
     protected Employee employee;
@@ -25,13 +21,6 @@ public class Phone extends StandardEntity {
     public Employee getEmployee(){ return employee;}
 
     public void setEmployee(Employee employee){ this.employee = employee; }
-
-    public TypePhone getTypePhone() {
-        return typePhone == null ? null : TypePhone.fromId(typePhone);
-    }
-    public void setTypePhone(TypePhone typePhone) {
-        this.typePhone = typePhone == null ? null : typePhone.getId();
-    }
 
     public String getNumberPhone() {
         return numberPhone;

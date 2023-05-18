@@ -26,8 +26,8 @@
         <form id="form" dataContainer="phoneDc">
             <column width="350px">
                 <lookupPickerField id="employeeField" property="employee" optionsContainer="employeeDc" nullOptionVisible="false"/>
-                <lookupField id="typePhoneField" property="typePhone"/>
                 <maskedField id="numberPhoneField" mask="8(###)###-##-##" valueMode="masked" property="numberPhone"/>
+
             </column>
         </form>
         <hbox id="editActions" spacing="true">
