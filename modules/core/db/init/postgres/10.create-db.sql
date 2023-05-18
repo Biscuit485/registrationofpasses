@@ -31,20 +31,3 @@ create table REGISTRATIONOFPASSES_EMPLOYEE (
 )^
 -- end REGISTRATIONOFPASSES_EMPLOYEE
 >>>>>>> entity
--- begin REGISTRATIONOFPASSES_PHONE
-create table REGISTRATIONOFPASSES_PHONE (
-    ID uuid,
-    VERSION integer not null,
-    CREATE_TS timestamp,
-    CREATED_BY varchar(50),
-    UPDATE_TS timestamp,
-    UPDATED_BY varchar(50),
-    DELETE_TS timestamp,
-    DELETED_BY varchar(50),
-    --
-    NUMBERPHONE varchar(255),
-    TYPEPHONE varchar(50),
-    --
-    primary key (ID)
-)^
--- end REGISTRATIONOFPASSES_PHONE

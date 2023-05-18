@@ -16,17 +16,6 @@ public class Phone extends StandardEntity {
     @NotNull
     private String numberPhone;
 
-    @Column(name = "TYPEPHONE")
-    @NotNull
-    protected String typePhone;
-
-    public TypePhone getTypePhone() {
-        return typePhone == null ? null : TypePhone.fromId(typePhone);
-    }
-    public void setTypePhone(TypePhone typePhone) {
-        this.typePhone = typePhone == null ? null : typePhone.getId();
-    }
-
     public String getNumberPhone() {
         return numberPhone;
     }

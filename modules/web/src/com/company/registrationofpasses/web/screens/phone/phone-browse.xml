@@ -34,7 +34,6 @@
             </actions>
             <columns>
                 <column id="numberPhone"/>
-                <column id="typePhone"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
