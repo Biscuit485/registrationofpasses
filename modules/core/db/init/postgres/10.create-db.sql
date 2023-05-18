@@ -35,7 +35,7 @@ create table REGISTRATIONOFPASSES_PHONE (
     DELETED_BY varchar(50),
     --
     NUMBERPHONE varchar(255),
-    TYPEPHONE varchar(50),
+    NUMBERWORKPHONE varchar(255),
     EMPLOYEE uuid,
     --
     primary key (ID)

@@ -18,4 +18,7 @@ public class PhoneEdit extends StandardEditor<Phone> {
     @Inject
     private Notifications notifications;
 
+    @Inject
+    private MaskedField numberWorkPhoneField;
+
 }

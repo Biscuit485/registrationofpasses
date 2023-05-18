@@ -49,6 +49,7 @@
             <columns>
                 <column id="employee" optionsContainer="employeeDc"/>
                 <column id="numberPhone"/>
+                <column id="numberWorkPhone"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

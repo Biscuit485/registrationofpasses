@@ -7,7 +7,7 @@
         <instance id="phoneDc"
                   class="com.company.registrationofpasses.entity.Phone">
             <view extends="_local">
-                <property name = "employee" view="_minimal"/>
+                <property name="employee" view="_minimal"/>
             </view>
             <loader/>
         </instance>
@@ -27,7 +27,7 @@
             <column width="350px">
                 <lookupPickerField id="employeeField" property="employee" optionsContainer="employeeDc" nullOptionVisible="false"/>
                 <maskedField id="numberPhoneField" mask="8(###)###-##-##" valueMode="masked" property="numberPhone"/>
-
+                <maskedField id="numberWorkPhoneField" mask="###-##-##" valueMode="masked" property="numberWorkPhone"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

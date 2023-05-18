@@ -14,6 +14,10 @@ public class Phone extends StandardEntity {
     @NotNull
     protected String numberPhone;
 
+    @Column(name = "NUMBERWORKPHONE")
+    @NotNull
+    protected String numberWorkPhone;
+
     @JoinColumn(name = "EMPLOYEE")
     @ManyToOne(fetch = FetchType.LAZY)
     protected Employee employee;
@@ -28,5 +32,13 @@ public class Phone extends StandardEntity {
 
     public void setNumberPhone(String numberPhone) {
         this.numberPhone = numberPhone;
+    }
+
+    public String getNumberWorkPhone() {
+        return numberWorkPhone;
+    }
+
+    public void setNumberWorkPhone(String numberWorkPhone) {
+        this.numberWorkPhone = numberWorkPhone;
     }
 }
