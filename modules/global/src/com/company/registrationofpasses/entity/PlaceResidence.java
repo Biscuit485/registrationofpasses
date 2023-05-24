@@ -29,14 +29,14 @@ public class PlaceResidence extends StandardEntity {
 
     @Column(name = "HOUSE")
     @NotNull
-    protected String house;
+    protected Integer house;
 
     @Column(name = "CORPUS")
     protected String corpus;
 
     @Column(name = "FLAT")
     @NotNull
-    protected String flat;
+    protected Integer flat;
 
 
     @Column(name = "TYPEADDRESS")
@@ -82,11 +82,11 @@ public class PlaceResidence extends StandardEntity {
         this.street = street;
     }
 
-    public String getHouse() {
+    public Integer getHouse() {
         return house;
     }
 
-    public void setHouse(String house) {
+    public void setHouse(Integer house) {
         this.house = house;
     }
 
@@ -98,11 +98,11 @@ public class PlaceResidence extends StandardEntity {
         this.corpus = corpus;
     }
 
-    public String getFlat() {
+    public Integer getFlat() {
         return flat;
     }
 
-    public void setFlat(String flat) {
+    public void setFlat(Integer flat) {
         this.flat = flat;
     }
 }

@@ -1,0 +1,1 @@
+alter table REGISTRATIONOFPASSES_PLACE_RESIDENCE drop column FLAT__U75924 cascade ;

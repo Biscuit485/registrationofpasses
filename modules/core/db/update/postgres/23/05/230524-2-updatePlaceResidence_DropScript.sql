@@ -1,0 +1,1 @@
+alter table REGISTRATIONOFPASSES_PLACE_RESIDENCE drop column HOUSE__U27923 cascade ;

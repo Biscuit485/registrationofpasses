@@ -1,0 +1,1 @@
+drop table if exists REGISTRATIONOFPASSES_REQUEST__U85008 cascade ;
