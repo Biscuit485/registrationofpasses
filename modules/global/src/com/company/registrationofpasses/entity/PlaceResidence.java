@@ -14,6 +14,13 @@ public class PlaceResidence extends StandardEntity {
     @JoinTable(name = "EMPLOYEE_PLACERESIDENCE_LINK", joinColumns = @JoinColumn(name = "PLACERESIDENCE_ID"), inverseJoinColumns = @JoinColumn(name = "EMPLOYEE_ID"))
     @ManyToMany
     protected List<Employee> employees;
+    public List<Employee> getEmployees() {
+        return employees;
+    }
+
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 
     @Column(name = "REGION")
     @NotNull

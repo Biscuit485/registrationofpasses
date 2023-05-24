@@ -7,9 +7,11 @@
         <instance id="employeeDc"
                   class="com.company.registrationofpasses.entity.Employee">
             <view extends="_local">
-                    <property name = "placeWork" view="_minimal"/>
+                <property name="placeWork" view="_minimal"/>
+                <property name="placeResidences" view="_local"/>
             </view>
             <loader/>
+            <collection id="placeResidencesDc" property="placeResidences"/>
         </instance>
         <collection id="placeWorkDc" class="com.company.registrationofpasses.entity.PlaceWork">
             <view extends="_minimal"/>
@@ -29,9 +31,33 @@
                 <textField id="firstNameField" property="firstName"/>
                 <textField id="lastNameField" property="lastName"/>
                 <dateField id="dateBirthField" property="dateBirth"/>
-                <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc" nullOptionVisible="false"/>
+                <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc"
+                                   nullOptionVisible="false"/>
             </column>
         </form>
+        <groupBox id="placeResidencesBox"
+                  caption="msg://com.company.registrationofpasses.entity/Employee.placeResidences">
+            <table id="placeResidencesTable" dataContainer="placeResidencesDc" width="100%" height="200px">
+                <actions>
+                    <action id="add" type="add"/>
+                    <action id="exclude" type="exclude"/>
+                </actions>
+                <columns>
+                    <column id="region"/>
+                    <column id="city"/>
+                    <column id="settlement"/>
+                    <column id="street"/>
+                    <column id="house"/>
+                    <column id="corpus"/>
+                    <column id="flat"/>
+                    <column id="typeAddress"/>
+                </columns>
+                <buttonsPanel>
+                    <button action="placeResidencesTable.add"/>
+                    <button action="placeResidencesTable.exclude"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>
