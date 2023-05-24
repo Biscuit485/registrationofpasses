@@ -6,12 +6,17 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.Set;
 
 @Table(name = "REGISTRATIONOFPASSES_EMPLOYEE")
 @Entity(name = "registrationofpasses_Employee")
 @NamePattern("%s %s %s|middleName, firstName, lastName")
 public class Employee extends StandardEntity {
     private static final long serialVersionUID = -6413025411645155462L;
+
+    @JoinTable(name = "EMPLOYEE_PLACERESIDENCE_LINK", joinColumns = @JoinColumn(name = "EMPLOYEE_ID"), inverseJoinColumns = @JoinColumn(name = "PLACERESIDENCE_ID"))
+    @ManyToMany(mappedBy = "")
+    protected Set<PlaceResidence> placeResidences;
 
     @Column(name = "MIDDLENAME")
     @NotNull

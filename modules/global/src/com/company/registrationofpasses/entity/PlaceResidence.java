@@ -2,15 +2,18 @@ package com.company.registrationofpasses.entity;
 
 import com.haulmont.cuba.core.entity.StandardEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Table(name = "REGISTRATIONOFPASSES_PLACE_RESIDENCE")
 @Entity(name = "registrationofpasses_PlaceResidence")
 public class PlaceResidence extends StandardEntity {
     private static final long serialVersionUID = -3925017639164982363L;
+
+    @JoinTable(name = "EMPLOYEE_PLACERESIDENCE_LINK", joinColumns = @JoinColumn(name = "PLACERESIDENCE_ID"), inverseJoinColumns = @JoinColumn(name = "EMPLOYEE_ID"))
+    @ManyToMany
+    protected List<Employee> employees;
 
     @Column(name = "REGION")
     @NotNull
