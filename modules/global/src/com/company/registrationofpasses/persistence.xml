@@ -6,5 +6,6 @@
         <class>com.company.registrationofpasses.entity.Employee</class>
         <class>com.company.registrationofpasses.entity.Phone</class>
         <class>com.company.registrationofpasses.entity.PlaceResidence</class>
+        <class>com.company.registrationofpasses.entity.Request</class>
     </persistence-unit>
 </persistence>
