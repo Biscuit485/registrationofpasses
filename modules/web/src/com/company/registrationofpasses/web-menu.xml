@@ -11,6 +11,8 @@
               caption="mainMsg://menu_config.registrationofpasses_PlaceResidence.browse"/>
         <item screen="registrationofpasses_Request.browse"
               caption="mainMsg://menu_config.registrationofpasses_Request.browse"/>
+        <item screen="registrationofpasses_Area.browse"
+              caption="mainMsg://menu_config.registrationofpasses_Area.browse"/>
 
     </menu>
 </menu-config>

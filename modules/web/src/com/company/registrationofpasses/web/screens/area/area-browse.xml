@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        xmlns:c="http://schemas.haulmont.com/cuba/screen/jpql_condition.xsd"
+        caption="msg://areaBrowse.caption"
+        focusComponent="areasTable"
+        messagesPack="com.company.registrationofpasses.web.screens.area">
+    <data readOnly="true">
+        <collection id="areasDc"
+                    class="com.company.registrationofpasses.entity.Area">
+            <view extends="_local"/>
+            <loader id="areasDl">
+                <query>
+                    <![CDATA[select e from registrationofpasses_Area e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <dialogMode height="600"
+                width="800"/>
+    <layout expand="areasTable"
+            spacing="true">
+        <filter id="filter"
+                applyTo="areasTable"
+                dataLoader="areasDl">
+            <properties include=".*"/>
+        </filter>
+        <groupTable id="areasTable"
+                    width="100%"
+                    dataContainer="areasDc">
+            <actions>
+                <action id="create" type="create"/>
+                <action id="edit" type="edit"/>
+                <action id="remove" type="remove"/>
+            </actions>
+            <columns>
+                <column id="numberArea"/>
+                <column id="building"/>
+            </columns>
+            <rowsCount/>
+            <buttonsPanel id="buttonsPanel"
+                          alwaysVisible="true">
+                <button id="createBtn" action="areasTable.create"/>
+                <button id="editBtn" action="areasTable.edit"/>
+                <button id="removeBtn" action="areasTable.remove"/>
+            </buttonsPanel>
+        </groupTable>
+        <hbox id="lookupActions" spacing="true" visible="false">
+            <button action="lookupSelectAction"/>
+            <button action="lookupCancelAction"/>
+        </hbox>
+    </layout>
+</window>
