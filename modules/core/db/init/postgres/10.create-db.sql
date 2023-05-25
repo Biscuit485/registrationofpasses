@@ -97,6 +97,7 @@ create table REGISTRATIONOFPASSES_REQUEST (
     TYPEREASON varchar(50),
     CREATEDATE timestamp,
     ENDDATE date,
+    EXECUTOR varchar(255),
     --
     primary key (ID)
 )^

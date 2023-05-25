@@ -40,6 +40,7 @@
                 <column id="typeReason"/>
                 <column id="createDate"/>
                 <column id="endDate"/>
+                <column id="executor"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

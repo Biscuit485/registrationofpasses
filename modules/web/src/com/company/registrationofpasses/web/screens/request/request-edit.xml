@@ -26,7 +26,8 @@
                 <lookupField id="typePassField" property="typePass"/>
                 <lookupField id="typeReasonField" property="typeReason"/>
                 <dateField id="createDateField" property="createDate" autofill="true"/>
-                <dateField id="endDateField" property="endDate" />
+                <dateField id="endDateField" property="endDate"/>
+                <textField id="executorField" property="executor"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

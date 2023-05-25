@@ -70,4 +70,15 @@ public class Request extends StandardEntity {
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
     }
+
+    @Column(name = "EXECUTOR")
+    @NotNull
+    protected String executor;
+    public String getExecutor() {
+        return executor;
+    }
+
+    public void setExecutor(String executor) {
+        this.executor = executor;
+    }
 }
