@@ -38,6 +38,8 @@
                 <column id="employee"/>
                 <column id="typePass"/>
                 <column id="typeReason"/>
+                <column id="createDate"/>
+                <column id="endDate"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

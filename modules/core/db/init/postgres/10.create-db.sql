@@ -95,6 +95,8 @@ create table REGISTRATIONOFPASSES_REQUEST (
     EMPLOYEE uuid,
     TYPEPASS varchar(50),
     TYPEREASON varchar(50),
+    CREATEDATE timestamp,
+    ENDDATE date,
     --
     primary key (ID)
 )^

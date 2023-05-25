@@ -1,0 +1,1 @@
+alter table REGISTRATIONOFPASSES_REQUEST add column ENDDATE date ;

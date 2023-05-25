@@ -4,6 +4,7 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 
 @Table(name = "REGISTRATIONOFPASSES_REQUEST")
 @Entity(name = "registrationofpasses_Request")
@@ -43,4 +44,30 @@ public class Request extends StandardEntity {
     }
 
 
+
+    @Column(name = "CREATEDATE")
+    @NotNull
+    @Temporal(TemporalType.TIMESTAMP)
+    protected Date createDate;
+
+    public Date getCreateDate() {
+        return createDate;
+    }
+
+    public void setCreateDate(Date createDate) {
+        this.createDate = createDate;
+    }
+
+    @Column(name = "ENDDATE")
+    @NotNull
+    @Temporal(TemporalType.DATE)
+    protected Date endDate;
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
 }

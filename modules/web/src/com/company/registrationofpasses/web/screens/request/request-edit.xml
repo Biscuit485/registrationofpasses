@@ -25,6 +25,8 @@
                 </pickerField>
                 <lookupField id="typePassField" property="typePass"/>
                 <lookupField id="typeReasonField" property="typeReason"/>
+                <dateField id="createDateField" property="createDate" autofill="true"/>
+                <dateField id="endDateField" property="endDate" />
             </column>
         </form>
         <hbox id="editActions" spacing="true">
