@@ -119,3 +119,10 @@ create table REGISTRATIONOFPASSES_AREA (
     primary key (ID)
 )^
 -- end REGISTRATIONOFPASSES_AREA
+-- begin REQUEST_AREA_LINK
+create table REQUEST_AREA_LINK (
+    REQUEST_ID uuid,
+    AREA_ID uuid,
+    primary key (REQUEST_ID, AREA_ID)
+)^
+-- end REQUEST_AREA_LINK

@@ -8,8 +8,10 @@
                   class="com.company.registrationofpasses.entity.Request">
             <view extends="_local">
                 <property name="employee" view="_minimal"/>
+                <property name="area" view="_local"/>
             </view>
             <loader/>
+            <collection id="areaDc" property="area"/>
         </instance>
     </data>
     <dialogMode height="600"
@@ -30,6 +32,22 @@
                 <textField id="executorField" property="executor"/>
             </column>
         </form>
+        <groupBox id="areaBox" caption="msg://com.company.registrationofpasses.entity/Request.area">
+            <table id="areaTable" dataContainer="areaDc" width="100%" height="200px">
+                <actions>
+                    <action id="add" type="add"/>
+                    <action id="exclude" type="exclude"/>
+                </actions>
+                <columns>
+                    <column id="numberArea"/>
+                    <column id="building"/>
+                </columns>
+                <buttonsPanel>
+                    <button action="areaTable.add"/>
+                    <button action="areaTable.exclude"/>
+                </buttonsPanel>
+            </table>
+        </groupBox>
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>

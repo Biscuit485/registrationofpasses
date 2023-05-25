@@ -5,11 +5,22 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
+import java.util.Set;
 
 @Table(name = "REGISTRATIONOFPASSES_REQUEST")
 @Entity(name = "registrationofpasses_Request")
 public class Request extends StandardEntity {
     private static final long serialVersionUID = -3648759302354622702L;
+    @JoinTable(name = "REQUEST_AREA_LINK", joinColumns = @JoinColumn(name = "REQUEST_ID"), inverseJoinColumns = @JoinColumn(name = "AREA_ID"))
+    @ManyToMany(mappedBy = "")
+    protected Set<Area> area;
+    public void setArea(Set<Area> area) {
+        this.area = area;
+    }
+
+    public Set<Area> getArea() {
+        return area;
+    }
 
     @JoinColumn(name = "EMPLOYEE")
     @NotNull
@@ -59,7 +70,6 @@ public class Request extends StandardEntity {
     }
 
     @Column(name = "ENDDATE")
-    @NotNull
     @Temporal(TemporalType.DATE)
     protected Date endDate;
 
