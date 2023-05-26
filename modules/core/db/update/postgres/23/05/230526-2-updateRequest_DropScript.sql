@@ -1,0 +1,2 @@
+alter table REGISTRATIONOFPASSES_REQUEST drop column CREATEDATE__U40283 cascade ;
+alter table REGISTRATIONOFPASSES_REQUEST drop column EXECUTOR__U90324 cascade ;

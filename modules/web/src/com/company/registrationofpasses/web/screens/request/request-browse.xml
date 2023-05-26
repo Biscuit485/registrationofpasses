@@ -33,14 +33,13 @@
                 <action id="create" type="create"/>
                 <action id="edit" type="edit"/>
                 <action id="remove" type="remove"/>
+                <action id="listPrintForm" type="listPrintForm" caption="Отправить в СЭД"/>
             </actions>
             <columns>
                 <column id="employee"/>
                 <column id="typePass"/>
-                <column id="typeReason"/>
-                <column id="createDate"/>
                 <column id="endDate"/>
-                <column id="executor"/>
+                <column id="typeReason"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"
@@ -48,6 +47,7 @@
                 <button id="createBtn" action="requestsTable.create"/>
                 <button id="editBtn" action="requestsTable.edit"/>
                 <button id="removeBtn" action="requestsTable.remove"/>
+                <button id="printBtn" action="requestsTable.listPrintForm"/>
             </buttonsPanel>
         </groupTable>
         <hbox id="lookupActions" spacing="true" visible="false">

@@ -26,10 +26,8 @@
                     </actions>
                 </pickerField>
                 <lookupField id="typePassField" property="typePass"/>
-                <lookupField id="typeReasonField" property="typeReason"/>
-                <dateField id="createDateField" property="createDate" autofill="true"/>
                 <dateField id="endDateField" property="endDate"/>
-                <textField id="executorField" property="executor"/>
+                <lookupField id="typeReasonField" property="typeReason"/>
             </column>
         </form>
         <groupBox id="areaBox" caption="msg://com.company.registrationofpasses.entity/Request.area">

@@ -11,9 +11,12 @@ import java.util.Set;
 @Entity(name = "registrationofpasses_Request")
 public class Request extends StandardEntity {
     private static final long serialVersionUID = -3648759302354622702L;
+
+
     @JoinTable(name = "REQUEST_AREA_LINK", joinColumns = @JoinColumn(name = "REQUEST_ID"), inverseJoinColumns = @JoinColumn(name = "AREA_ID"))
     @ManyToMany(mappedBy = "")
     protected Set<Area> area;
+
     public void setArea(Set<Area> area) {
         this.area = area;
     }
@@ -21,6 +24,7 @@ public class Request extends StandardEntity {
     public Set<Area> getArea() {
         return area;
     }
+
 
     @JoinColumn(name = "EMPLOYEE")
     @NotNull
@@ -31,6 +35,7 @@ public class Request extends StandardEntity {
 
     public void setEmployee(Employee employee){ this.employee = employee;}
 
+
     @Column(name = "TYPEPASS")
     @NotNull
     protected String typePass;
@@ -38,6 +43,7 @@ public class Request extends StandardEntity {
     public TypePass getTypePass() {
         return typePass == null ? null : TypePass.fromId(typePass);
     }
+
     public void setTypePass(TypePass typePass) {
         this.typePass = typePass == null ? null : typePass.getId();
     }
@@ -50,24 +56,9 @@ public class Request extends StandardEntity {
     public TypeReason getTypeReason() {
         return typeReason == null ? null : TypeReason.fromId(typeReason);
     }
-    public void setTypeReason(TypeReason typeReason) {
-        this.typeReason = typeReason == null ? null : typeReason.getId();
-    }
 
+    public void setTypeReason(TypeReason typeReason) {this.typeReason = typeReason == null ? null : typeReason.getId();}
 
-
-    @Column(name = "CREATEDATE")
-    @NotNull
-    @Temporal(TemporalType.TIMESTAMP)
-    protected Date createDate;
-
-    public Date getCreateDate() {
-        return createDate;
-    }
-
-    public void setCreateDate(Date createDate) {
-        this.createDate = createDate;
-    }
 
     @Column(name = "ENDDATE")
     @Temporal(TemporalType.DATE)
@@ -81,14 +72,4 @@ public class Request extends StandardEntity {
         this.endDate = endDate;
     }
 
-    @Column(name = "EXECUTOR")
-    @NotNull
-    protected String executor;
-    public String getExecutor() {
-        return executor;
-    }
-
-    public void setExecutor(String executor) {
-        this.executor = executor;
-    }
 }
