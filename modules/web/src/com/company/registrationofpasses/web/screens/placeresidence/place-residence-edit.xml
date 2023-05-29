@@ -7,10 +7,10 @@
         <instance id="placeResidenceDc"
                   class="com.company.registrationofpasses.entity.PlaceResidence">
             <view extends="_local">
-                <property name="employees" view="_local"/>
+
             </view>
             <loader/>
-            <collection id="employeesDc" property="employees"/>
+
         </instance>
     </data>
     <dialogMode height="600"
@@ -28,24 +28,7 @@
                 <lookupField id="typeAddressField" property="typeAddress"/>
             </column>
         </form>
-        <groupBox id="employeesBox" caption="msg://com.company.registrationofpasses.entity/PlaceResidence.employees">
-            <table id="employeesTable" dataContainer="employeesDc" width="100%" height="200px">
-                <actions>
-                    <action id="add" type="add"/>
-                    <action id="exclude" type="exclude"/>
-                </actions>
-                <columns>
-                    <column id="middleName"/>
-                    <column id="firstName"/>
-                    <column id="lastName"/>
-                    <column id="dateBirth"/>
-                </columns>
-                <buttonsPanel>
-                    <button action="employeesTable.add"/>
-                    <button action="employeesTable.exclude"/>
-                </buttonsPanel>
-            </table>
-        </groupBox>
+
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>

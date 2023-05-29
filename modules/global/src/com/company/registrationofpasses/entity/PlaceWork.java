@@ -18,8 +18,6 @@ public class PlaceWork extends StandardEntity {
     @NotNull
     protected String placeWork;
 
-
-
     @Column(name = "POST")
     @NotNull
     protected String post;
@@ -27,7 +25,6 @@ public class PlaceWork extends StandardEntity {
     public String getPlaceWork() {
         return placeWork;
     }
-
     public void setPlaceWork(String placeWork) {
         this.placeWork = placeWork;
     }
@@ -35,7 +32,6 @@ public class PlaceWork extends StandardEntity {
     public String getPost() {
         return post;
     }
-
     public void setPost(String post) {
         this.post = post;
     }

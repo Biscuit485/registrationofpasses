@@ -17,10 +17,10 @@ public class Employee extends StandardEntity {
     @JoinTable(name = "EMPLOYEE_PLACERESIDENCE_LINK", joinColumns = @JoinColumn(name = "EMPLOYEE_ID"), inverseJoinColumns = @JoinColumn(name = "PLACERESIDENCE_ID"))
     @ManyToMany(mappedBy = "")
     protected Set<PlaceResidence> placeResidences;
+
     public void setPlaceResidences(Set<PlaceResidence> placeResidences) {
         this.placeResidences = placeResidences;
     }
-
     public Set<PlaceResidence> getPlaceResidences() {
         return placeResidences;
     }
@@ -48,12 +48,11 @@ public class Employee extends StandardEntity {
     protected PlaceWork placeWork;
 
     public  PlaceWork getPlaceWork(){ return placeWork; }
-
     public void setPlaceWork(PlaceWork placeWork){ this.placeWork = placeWork;}
+
     public String getMiddleName() {
         return middleName;
     }
-
     public void setMiddleName(String middleName) {
         this.middleName = middleName;
     }
@@ -61,7 +60,6 @@ public class Employee extends StandardEntity {
     public String getFirstName() {
         return firstName;
     }
-
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -69,7 +67,6 @@ public class Employee extends StandardEntity {
     public String getLastName() {
         return lastName;
     }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -77,7 +74,6 @@ public class Employee extends StandardEntity {
     public Date getDateBirth() {
         return dateBirth;
     }
-
     public void setDateBirth(Date dateBirth) {
         this.dateBirth = dateBirth;
     }

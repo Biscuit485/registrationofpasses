@@ -12,19 +12,12 @@ import java.util.Set;
 public class Request extends StandardEntity {
     private static final long serialVersionUID = -3648759302354622702L;
 
-
     @JoinTable(name = "REQUEST_AREA_LINK", joinColumns = @JoinColumn(name = "REQUEST_ID"), inverseJoinColumns = @JoinColumn(name = "AREA_ID"))
     @ManyToMany(mappedBy = "")
     protected Set<Area> area;
 
-    public void setArea(Set<Area> area) {
-        this.area = area;
-    }
-
-    public Set<Area> getArea() {
-        return area;
-    }
-
+    public void setArea(Set<Area> area) {this.area = area;}
+    public Set<Area> getArea() {return area;}
 
     @JoinColumn(name = "EMPLOYEE")
     @NotNull
@@ -32,44 +25,27 @@ public class Request extends StandardEntity {
     protected Employee employee;
 
     public  Employee getEmployee(){ return employee; }
-
     public void setEmployee(Employee employee){ this.employee = employee;}
-
 
     @Column(name = "TYPEPASS")
     @NotNull
     protected String typePass;
 
-    public TypePass getTypePass() {
-        return typePass == null ? null : TypePass.fromId(typePass);
-    }
+    public TypePass getTypePass() {return typePass == null ? null : TypePass.fromId(typePass);}
 
-    public void setTypePass(TypePass typePass) {
-        this.typePass = typePass == null ? null : typePass.getId();
-    }
-
+    public void setTypePass(TypePass typePass) {this.typePass = typePass == null ? null : typePass.getId();}
 
     @Column(name = "TYPEREASON")
     @NotNull
     protected String typeReason;
 
-    public TypeReason getTypeReason() {
-        return typeReason == null ? null : TypeReason.fromId(typeReason);
-    }
-
+    public TypeReason getTypeReason() {return typeReason == null ? null : TypeReason.fromId(typeReason);}
     public void setTypeReason(TypeReason typeReason) {this.typeReason = typeReason == null ? null : typeReason.getId();}
-
 
     @Column(name = "ENDDATE")
     @Temporal(TemporalType.DATE)
     protected Date endDate;
 
-    public Date getEndDate() {
-        return endDate;
-    }
-
-    public void setEndDate(Date endDate) {
-        this.endDate = endDate;
-    }
-
+    public Date getEndDate() {return endDate;}
+    public void setEndDate(Date endDate) {this.endDate = endDate;}
 }

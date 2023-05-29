@@ -15,10 +15,10 @@ public class Area extends StandardEntity {
     @Column(name = "NUMBERAREA")
     @NotNull
     protected String numberArea;
+
     public String getNumberArea() {
         return numberArea;
     }
-
     public void setNumberArea(String numberArea) {
         this.numberArea = numberArea;
     }
@@ -26,10 +26,10 @@ public class Area extends StandardEntity {
     @Column(name = "BUILDING")
     @NotNull
     protected String building;
+
     public String getBuilding() {
         return building;
     }
-
     public void setBuilding(String building) {
         this.building = building;
     }

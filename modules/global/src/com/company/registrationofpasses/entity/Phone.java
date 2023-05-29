@@ -23,13 +23,11 @@ public class Phone extends StandardEntity {
     protected Employee employee;
 
     public Employee getEmployee(){ return employee;}
-
     public void setEmployee(Employee employee){ this.employee = employee; }
 
     public String getNumberPhone() {
         return numberPhone;
     }
-
     public void setNumberPhone(String numberPhone) {
         this.numberPhone = numberPhone;
     }
@@ -37,7 +35,6 @@ public class Phone extends StandardEntity {
     public String getNumberWorkPhone() {
         return numberWorkPhone;
     }
-
     public void setNumberWorkPhone(String numberWorkPhone) {
         this.numberWorkPhone = numberWorkPhone;
     }
