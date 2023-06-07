@@ -1,0 +1,4 @@
+alter table REGISTRATIONOFPASSES_PHONE rename column employee to employee__u32421 ;
+alter table REGISTRATIONOFPASSES_PHONE drop constraint FK_REGISTRATIONOFPASSES_PHONE_ON_EMPLOYEE ;
+drop index IDX_REGISTRATIONOFPASSES_PHONE_ON_EMPLOYEE ;
+alter table REGISTRATIONOFPASSES_PHONE rename column numberphone to numberphone__u00914 ;

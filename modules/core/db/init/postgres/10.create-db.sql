@@ -16,8 +16,10 @@ create table REGISTRATIONOFPASSES_EMPLOYEE (
     MIDDLENAME varchar(255),
     FIRSTNAME varchar(255),
     LASTNAME varchar(255),
+    NUMBERPHONE varchar(255),
     DATEBIRTH date,
     PLACEWORK uuid,
+    NUMBERWORKPHONE uuid,
     --
     primary key (ID)
 )^
@@ -34,9 +36,7 @@ create table REGISTRATIONOFPASSES_PHONE (
     DELETE_TS timestamp,
     DELETED_BY varchar(50),
     --
-    NUMBERPHONE varchar(255),
     NUMBERWORKPHONE varchar(255),
-    EMPLOYEE uuid,
     --
     primary key (ID)
 )^

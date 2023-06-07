@@ -1,0 +1,2 @@
+alter table REGISTRATIONOFPASSES_PHONE drop column NUMBERPHONE__U00914 cascade ;
+alter table REGISTRATIONOFPASSES_PHONE drop column EMPLOYEE__U32421 cascade ;

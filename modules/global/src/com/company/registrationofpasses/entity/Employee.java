@@ -36,6 +36,9 @@ public class Employee extends StandardEntity {
     @Column(name = "LASTNAME")
     @NotNull
     protected String lastName;
+    @Column(name = "NUMBERPHONE")
+    @NotNull
+    protected String numberPhone;
 
     @Column(name = "DATEBIRTH")
     @NotNull
@@ -47,8 +50,18 @@ public class Employee extends StandardEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     protected PlaceWork placeWork;
 
+    @JoinColumn(name = "NUMBERWORKPHONE")
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    protected Phone numberWorkPhone;
+
     public  PlaceWork getPlaceWork(){ return placeWork; }
     public void setPlaceWork(PlaceWork placeWork){ this.placeWork = placeWork;}
+
+    public  Phone getNumberWorkPhone(){ return numberWorkPhone; }
+    public void setNumberWorkPhone(Phone numberWorkPhone){ this.numberWorkPhone = numberWorkPhone;}
+    public  String getNumberPhone(){ return numberPhone; }
+    public void setNumberPhone(String numberPhone){ this.numberPhone = numberPhone;}
 
     public String getMiddleName() {
         return middleName;

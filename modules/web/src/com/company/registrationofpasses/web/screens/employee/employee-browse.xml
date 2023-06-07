@@ -12,6 +12,7 @@
                     <property name="placeWork"/>
                     <property name="post"/>
                 </property>
+                <property name="numberWorkPhone" view="_minimal"/>
             </view>
             <loader id="employeesDl">
                 <query>
@@ -50,6 +51,8 @@
                 <column id="lastName"/>
                 <column id="dateBirth"/>
                 <column id="placeWork" optionsContainer="placeWorkDc"/>
+                <column id="numberPhone"/>
+                <column id="numberWorkPhone"/>
             </columns>
             <rowsCount/>
             <buttonsPanel id="buttonsPanel"

@@ -9,6 +9,7 @@
             <view extends="_local">
                 <property name="placeWork" view="_minimal"/>
                 <property name="placeResidences" view="_local"/>
+                <property name="numberWorkPhone" view="_minimal"/>
             </view>
             <loader/>
             <collection id="placeResidencesDc" property="placeResidences"/>
@@ -33,6 +34,8 @@
                 <dateField id="dateBirthField" property="dateBirth"/>
                 <lookupPickerField id="placeWorkField" property="placeWork" optionsContainer="placeWorkDc"
                                    nullOptionVisible="false"/>
+                <maskedField id="numberPhoneField" mask="8(###)###-##-##" valueMode="masked" property="numberPhone"/>
+                <pickerField id="numberWorkPhoneField" property="numberWorkPhone"/>
             </column>
         </form>
         <groupBox id="placeResidencesBox"

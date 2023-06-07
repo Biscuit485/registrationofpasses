@@ -6,28 +6,16 @@
     <data>
         <instance id="phoneDc"
                   class="com.company.registrationofpasses.entity.Phone">
-            <view extends="_local">
-                <property name="employee" view="_minimal"/>
-            </view>
+            <view extends="_local"/>
             <loader/>
         </instance>
-        <collection id="employeeDc" class="com.company.registrationofpasses.entity.Employee">
-            <view extends="_minimal"/>
-            <loader id="employeeDl">
-                <query>
-                    <![CDATA[select e from registrationofpasses_Employee e]]>
-                </query>
-            </loader>
-        </collection>
     </data>
     <dialogMode height="600"
                 width="800"/>
     <layout expand="editActions" spacing="true">
         <form id="form" dataContainer="phoneDc">
             <column width="350px">
-                <lookupPickerField id="employeeField" property="employee" optionsContainer="employeeDc" nullOptionVisible="false"/>
-                <maskedField id="numberPhoneField" mask="8(###)###-##-##" valueMode="masked" property="numberPhone"/>
-                <maskedField id="numberWorkPhoneField" mask="###-##-##" valueMode="masked" property="numberWorkPhone"/>
+                <textField id="numberWorkPhoneField" property="numberWorkPhone"/>
             </column>
         </form>
         <hbox id="editActions" spacing="true">

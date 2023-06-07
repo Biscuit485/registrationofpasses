@@ -14,5 +14,6 @@
         <item screen="registrationofpasses_Area.browse"
               caption="mainMsg://menu_config.registrationofpasses_Area.browse"/>
 
+
     </menu>
 </menu-config>
